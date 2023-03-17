@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Форма с комментариями</title>
+	
+	<link rel="stylesheet" href="form-style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<script src="form-reaction.js"></script>
+
+  </head>
+  
+  <body>
+  
+    <div class="comments-block">
+
+	  <h2>Форма с комментариями</h2>	  
+
+	  <form>
+		
+		<label id="name-label"> Имя*: </label>
+		<input type="text" id="name" placeholder="Введите имя" />
+		
+		<input type="text" id="date" placeholder="17.03.23" />
+		<label id="date-label"> Дата: </label>
+		
+		<p>* Поле со звёздочкой обязательно для заполнения </p>
+		
+		<label> Текст комментария: </label>
+	    <textarea name="message" rows="3" placeholder="Напишите здесь..."></textarea>
+		<i class="material-icons" title = 'Отправить'>send</i>
+		
+	  </form>	
+	  
+	  
+	  <script>
+	  
+	    document.querySelector('input').onfocus = changeText;
+		document.getElementById('date').onfocus = changeText;
+		document.getElementById('date').onblur = dateChecking;	
+		document.querySelector('.material-icons').onclick = addComment;	
+	
+	  </script>
+	  
+	  
+	  <div id="new-comment">
+	  
+		<span class="info">
+		  <b>Name</b>
+		  <b id="time"></b>
+		</span>
+		
+		<p id="comment"> </p>
+		
+		<span>
+		  <i class="material-icons" id="like" title = 'Понравилось?' onclick="toggleLike(this);">
+		    favorite_border
+		  </i>
+		  <i class="material-icons" id="basket" title = 'Удалить' onclick="closeComment(this);">
+		    delete
+		  </i>
+		</span>	
+		
+	  </div>
+		
+	  <div id="comments-list"></div>
+
+	  
+	</div>
+	
+	<p id="arrow">&darr;</p>
+	
+	
+  </body>
+  
+</html>

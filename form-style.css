@@ -1,0 +1,124 @@
+body {    
+  background-image: url("Notes.jpg");
+  background-size: cover;
+}
+
+.comments-block {
+  width: 30%;
+  height: 830px;
+  padding: 5px 50px;
+  margin: 5vh 7vw;
+  background: rgb(0, 128, 128, 0.1);
+  border: 1px solid silver;
+  border-radius: 9px;
+  box-shadow: 3px 5px 10px gray;
+  overflow-y: scroll;
+}
+	  
+.comments-block::-webkit-scrollbar {
+  display: none;
+}
+	  
+h2 {
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+  color: rgb(72, 61, 139);
+  letter-spacing: 0.2em;
+}
+	  
+label {
+  margin: 4px 20px 0px 0px;
+  font-size: 20px;
+  color: rgb(72, 61, 139);
+  vertical-align: middle;
+}
+	  
+input,
+textarea {
+  width: 25%;
+  padding: 10px;
+  display: inline;
+  border-radius: 7px;
+}
+	  
+textarea {
+  width: 85%;
+  margin: 10px 0px;
+  resize: none;
+  vertical-align: middle;
+}
+	  
+#name-label,
+#name {
+  float: left;
+}
+	  
+#date-label,
+#date {
+  float: right;		
+}
+	  
+form p{
+  top: 5px;
+  position: relative;
+  margin: 17px 3px;
+  clear: both;
+}
+	  
+p {
+  margin: 0;
+  padding: 10px;
+  color: rgb(100, 100, 100);
+}
+	  
+span {
+  display: block;
+  padding: 0px 10px 10px 0px;
+  border-bottom: 1px solid silver;
+}
+
+i {
+  margin-left: 15px;
+  vertical-align: middle;
+  color: rgb(0, 128, 128, 0.7);
+  cursor: pointer;
+}
+	  
+i:hover {
+  color: teal;
+}
+	  
+span .material-icons {
+  font-size: 18px;
+}
+	  
+#basket {
+  float: right;
+  font-size: 20px;
+}
+	  
+#new-comment {
+  display: none;
+}
+	  
+.info {
+  margin: 0;
+  padding: 16px 5px 2px 5px;	
+  font-size: 16px;
+  color: rgb(72, 61, 139);
+  border-bottom: none;
+}
+	  
+#time {
+  float: right;
+  font-size: 14px;
+}
+
+#arrow {
+  margin-top: -100px;
+  margin-left: 50px;
+  position: absolute;
+  font-size: 30px;
+  color: grey;
+}
