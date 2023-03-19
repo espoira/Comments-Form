@@ -1,3 +1,5 @@
+﻿'use strict';
+
 let flag;
 
 function changeText() {
@@ -15,19 +17,23 @@ function dateChecking () {
 
   let date = document.getElementById('date');
 
-  let validformat=/^\d{2}\/\d{2}\/\d{2}$/;
+  let validformat = /^[0-3]\d\.[0-1]\d\.\d{2}$/;
 
-  if (!validformat.test(date.value) && document.querySelector('input').value) {
+  if (date.value.match(validformat) === null && document.querySelector('input').value) {
 
-  if (!date.value) {
-    document.querySelector('p').textContent = 'К комментарию будет автоматически добавлена текущая дата';
-  } else {
-    date.value = '';
-    document.querySelector('p').textContent = 'Дата введена некорректно, и будет добавлена автоматически.';			
-  }
+    if (!date.value) {
+		
+      document.querySelector('p').textContent = 'К комментарию будет автоматически добавлена текущая дата';
+	  
+    } else {
+		
+      document.querySelector('p').textContent = 'Дата введена некорректно, и будет добавлена автоматически.';
+      date.value = '';
+	  
+    }
 
-  document.querySelector('p').style.color = 'green';	
-  flag = false;
+    document.querySelector('p').style.color = 'green';	
+    flag = false;
 
   }
 }
@@ -56,6 +62,7 @@ function getDateTime () {
 
 document.onkeydown = function(e) {
   if (e.key == 'Enter') {
+	dateChecking();
     addComment();
   }
 }
